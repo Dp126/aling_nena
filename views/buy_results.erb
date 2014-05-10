@@ -36,14 +36,14 @@
     <div>
       <br/>
       <h1>You have purchased <%= @product.name %> succesfully! </h1>
-      <h1>Your change is: <%= @money_calculator.change(cost, amount) %>.</h1>
-      <h2>Thousands : <%= @money_calculator.change_thousands %></h2>
-      <h2>Five Hundred : <%= @money_calculator.change_fivehundreds %></h2>
-      <h2>Hundreds : <%= @money_calculator.change_hundreds %></h2>
-      <h2>Fifties : <%= @money_calculator.change_fifties %></h2>
-      <h2>Twenties : <%= @money_calculator.change_twenties %></h2>
-      <h2>Tens : <%= @money_calculator.change_tens %></h2>
-      <h2>Ones : <%= @money_calculator.change_ones %></h2>
+      <h1>Your change is: Php <%= @calcu.total_c %>.</h1>
+      <h2>Thousands : <%= @change_bill[:thousands] %></h2>
+      <h2>Five Hundred : <%= @change_bill[:five_hundreds] %></h2>
+      <h2>Hundreds : <%= @change_bill[:hundreds] %></h2>
+      <h2>Fifties : <%= @change_bill[:fifties] %></h2>
+      <h2>Twenties : <%= @change_bill[:twenties] %></h2>
+      <h2>Tens : <%= @change_bill[:tens] %></h2>
+      <h2>Ones : <%= @change_bill[:ones] %></h2>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>

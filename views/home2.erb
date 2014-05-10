@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Carlos Alvarez, Theme designer & developer living in Madrid, Spain.">
     <meta name="author" content="Carlos Alvarez">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="shortcut icon" href="ico/favicon.png">
 
     <title>Aling Nena's Sari-sari Store</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
@@ -67,8 +67,8 @@
                     <tbody>
                         <% @random_product.each do |product| %>
                          <tr>
-                               <td><%= product.name %></td>
-                                <td><%= product.price %></td>
+                               <td><%= product.name %>    </td>
+                               <td><%= product.price %></td>
                         </tr>
                 <% end %>          
             </tbody>          
@@ -77,13 +77,13 @@
 		</div>
 		<div class="row centered">
 			<div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
-				<a data-toggle="tooltip" title="Dribbble" href="http://dribbble.com/CarlosAlvarez"><i class="fa fa-dribbble"></i></a>
-				<a data-toggle="tooltip" title="Twitter" href="http://twitter.com/BlackTie_co"><i class="fa fa-twitter"></i></a>
+				<a data-toggle="tooltip" title="Facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+				<a data-toggle="tooltip" title="Twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
 				<a data-toggle="tooltip" title="Premium Themes" href="https://wrapbootstrap.com/user/Basicoh"><i class="fa fa-briefcase"></i></a>
 				<a data-toggle="tooltip" title="Free Themes" href="http://BlackTie.co"><i class="fa fa-heart"></i></a>
-				<a data-toggle="tooltip" title="Blog" href="http://freelance.postach.io"><i class="fa fa-comment"></i></a>
-				<a data-toggle="tooltip" title="Email Me!" href="mailto:carlos@alvarez.is"><i class="fa fa-envelope"></i></a>
-				<a data-toggle="tooltip" title="Newsletter" href="http://eepurl.com/Eck_T"><i class="fa fa-coffee"></i></a>
+				<a data-toggle="tooltip" title="Blog" href="#"><i class="fa fa-comment"></i></a>
+				<a data-toggle="tooltip" title="Email Me!" href="http://mail.yahoo.com/"><i class="fa fa-envelope"></i></a>
+				<a data-toggle="tooltip" title="Newsletter" href="http://eepurl.com/"><i class="fa fa-coffee"></i></a>
 			</div>
 		</div>
     </div><!-- /.container -->
@@ -101,7 +101,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <script>
     $('.tooltip-demo').tooltip({
@@ -113,9 +113,9 @@
 
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("/img/bg.jpg", {speed: 500});
+        $.backstretch("img/bg.jpg", {speed: 500});
     </script>
 
   </body>

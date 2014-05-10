@@ -64,16 +64,16 @@ get '/buy/:id' do
 end
 
 post '/buy_product/:id' do
-  @item = Item.find(params[:id])
-  @quantity = params[:quantity]
-  @total_bill = MoneyCalculator.new(params[:ones],params[:fives].params[:tens],params[:twenties],params[:fifties],params[:hundreds],params[:fivehundreds],params[:thousands])
-  #if (@quantity < @product.quantity || @money_calculator.total > @total_bill)
+  @product = Item.find(params[:id])
+  @quantity = params[:quantity].to_i
+  @cost = @product.price.to_i
+  @calcu = MoneyCalculator.new(params[:ones],params[:fives],params[:tens],params[:twenties],params[:fifties],params[:hundreds],params[:five_hundreds],params[:thousands])
+  @change_bill = @calcu.change(@cost, @quantity)
+  if (@calcu.total.to_i > (@cost * @quantity))
     erb :buy_results
-  #end
-
-  #elsif
-   # erb :buy_failed
-  #end
+  else
+    erb :buy_failed
+  end
 end
 
 get '/about' do
