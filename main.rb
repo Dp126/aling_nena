@@ -1,5 +1,6 @@
 require 'sinatra'
 require './boot.rb'
+require './money_calculator.rb'
 
 # ROUTES FOR ADMIN SECTION
 get '/admin' do
@@ -43,3 +44,42 @@ get '/delete_product/:id' do
   redirect to '/admin'
 end
 # ROUTES FOR ADMIN SECTION
+
+# ROUTES FOR CLIENT SECTION
+get '/' do
+  @products = Item.all
+  @random_product = @products.sample(10)
+  erb :home2
+end
+
+get '/products' do
+  @products = Item.all
+  erb :products
+end
+
+get '/buy/:id' do
+  id = params[:id]
+  @product = Item.find(params[:id])
+  erb :buy_form
+end
+
+post '/buy_product/:id' do
+  @item = Item.find(params[:id])
+  @quantity = params[:quantity]
+  @total_bill = MoneyCalculator.new(params[:ones],params[:fives].params[:tens],params[:twenties],params[:fifties],params[:hundreds],params[:fivehundreds],params[:thousands])
+  #if (@quantity < @product.quantity || @money_calculator.total > @total_bill)
+    erb :buy_results
+  #end
+
+  #elsif
+   # erb :buy_failed
+  #end
+end
+
+get '/about' do
+  erb :about
+end
+
+# ROUTES FOR CLIENT SECTION
+
+

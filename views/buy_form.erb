@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Buy Products : Aling Nena </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/css/admin.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Aling Nena's</a><!-- this is where you set the navigation title -->
+        </div>
+        <div class="collapse navbar-collapse"><!-- collapse allows for this navbar to be used in mobile devices -->
+          <ul class="nav navbar-nav"><!-- this is the list of navigation options in your navbar -->
+            <li><a href="/">Home</a></li>
+            <li  class="active"><a href="/products">Products</a></li>
+            <li><a href="/about">About Aling Nena</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div>
+        <h3><%= @product.name %> - Php <%= @product.price %> - Stock: <%= @product.quantity %></h3>
+        <form role="form" method="POST" action="<%= "/buy_product/#{@product.id}" %>">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="quantity" class="col-sm-2 control-label">Quantity</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" name="quantity" min = "0" max = "<%= @product.quantity %>">
+              </div>
+            </div>
+            <br />
+            <br />
+            <h2>Bill Payment</h2>
+            <div class="form-group">
+              <label for="thousands" class="col-sm-2 control-label">Thousands</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" name="thousands" min = "0">
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="five_hundreds" class="col-sm-2 control-label">Five Hundreds</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" name="five_hundreds" min = "0">
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="hundreds" class="col-sm-2 control-label">Hundreds</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" name="hundreds" min = "0">
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="fifties" class="col-sm-2 control-label">Fifties</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" name="fifties" min = "0">
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="twenties" class="col-sm-2 control-label">Twenties</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" name="twenties" min = "0">
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="tens" class="col-sm-2 control-label">Tens</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" name="tens" min = "0">
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="fives" class="col-sm-2 control-label">Fives</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" name="fives" min = "0">
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="ones" class="col-sm-2 control-label">Ones</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" name="ones" min = "0">
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <br />
+                <input type="submit" class="btn btn-default btn-primary" value = "Buy Item">
+                <a href="/products" class="btn btn-default">Back to Product List</a>
+              </div>
+            </div>
+          </form>
+
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
