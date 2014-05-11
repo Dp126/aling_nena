@@ -3,26 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carlos Alvarez, Theme designer & developer living in Madrid, Spain.">
+    <meta name="author" content="Carlos Alvarez">
+    <link rel="shortcut icon" href="ico/favicon.png">
 
-    <title>Buy Products : Aling Nena </title>
+    <title>Purchase Form : Aling Nena's</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/css/admin.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+    <link href = "css/mystyle.css" rel="stylesheet">
+    
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
   </head>
 
   <body>
-
     <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -32,106 +44,137 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Aling Nena's</a><!-- this is where you set the navigation title -->
+          <strong /><a class="navbar-brand" href=" " >Aling Nena's <img src = "/img/logo.png" height = "40px"></a><!-- this is where you set the navigation title -->
         </div>
         <div class="collapse navbar-collapse"><!-- collapse allows for this navbar to be used in mobile devices -->
           <ul class="nav navbar-nav"><!-- this is the list of navigation options in your navbar -->
             <li><a href="/">Home</a></li>
-            <li  class="active"><a href="/products">Products</a></li>
+            <li><a class="active" href="/products">Products</a></li>
             <li><a href="/about">About Aling Nena</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
+    
     <div class="container">
-
-      <div>
-        <h3><%= @product.name %> - Php <%= @product.price %> - Stock: <%= @product.quantity %></h3>
-        <form role="form" method="POST" action="<%= "/buy_product/#{@product.id}" %>">
+      <div class="row centered">
+        <br>    
+        <div class="col-lg-6 col-lg-offset-3">
+          <center>
+          <h3><%= @product.name %> - Php <%= @product.price %> - Stock: <%= @product.quantity %></h3>
+          <form role="form" method="POST" action="<%= "/buy_product/#{@product.id}" %>">
             <div class="form-group">
               <label for="quantity" class="col-sm-2 control-label">Quantity</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" name="quantity" min = "0" max = "<%= @product.quantity %>">
+              <input type="number" class="form-control" name="quantity" min = "0" max = "<%= @product.quantity %>" value = "0">
               </div>
-            </div>
-            <br />
-            <br />
+            </div> <br /><br />
             <h2>Bill Payment</h2>
+
             <div class="form-group">
               <label for="thousands" class="col-sm-2 control-label">Thousands</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" name="thousands" min = "0">
+              <input type="number" class="form-control" name="thousands" min = "0" value = "0">
               </div>
-            </div>
-            <br />
+            </div><br />
+
             <div class="form-group">
               <label for="five_hundreds" class="col-sm-2 control-label">Five Hundreds</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" name="five_hundreds" min = "0">
+              <input type="number" class="form-control" name="five_hundreds" min = "0" value = "0">
               </div>
-            </div>
-            <br />
+            </div><br />
+
             <div class="form-group">
               <label for="hundreds" class="col-sm-2 control-label">Hundreds</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" name="hundreds" min = "0">
-              </div>
-            </div>
-            <br />
+              <input type="number" class="form-control" name="hundreds" min = "0" value = "0">
+              </div>            
+            </div><br />
+
             <div class="form-group">
               <label for="fifties" class="col-sm-2 control-label">Fifties</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" name="fifties" min = "0">
+              <input type="number" class="form-control" name="fifties" min = "0" value = "0">
               </div>
-            </div>
-            <br />
+            </div><br />
+
             <div class="form-group">
               <label for="twenties" class="col-sm-2 control-label">Twenties</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" name="twenties" min = "0">
+              <input type="number" class="form-control" name="twenties" min = "0" value = "0">
               </div>
-            </div>
-            <br />
-            <div class="form-group">
+            </div><br />
+
+            <div class="form-group">              
               <label for="tens" class="col-sm-2 control-label">Tens</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" name="tens" min = "0">
+              <input type="number" class="form-control" name="tens" min = "0" value = "0">
               </div>
-            </div>
-            <br />
+            </div><br />
+
             <div class="form-group">
               <label for="fives" class="col-sm-2 control-label">Fives</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" name="fives" min = "0">
+              <input type="number" class="form-control" name="fives" min = "0" value = "0">
               </div>
-            </div>
-            <br />
+            </div><br />
+
             <div class="form-group">
               <label for="ones" class="col-sm-2 control-label">Ones</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" name="ones" min = "0">
-              </div>
-            </div>
-            <br />
+              <input type="number" class="form-control" name="ones" min = "0" value = "0">
+              </div>            
+            </div><br />
+
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
-                <br />
-                <input type="submit" class="btn btn-default btn-primary" value = "Buy Item">
-                <a href="/products" class="btn btn-default">Back to Product List</a>
+              <br />
+              <input type="submit" class="btn btn-default btn-primary" value = "Buy Item">
+              <a href="/products" class="btn btn-default">Back to Product List</a>
               </div>
             </div>
           </form>
-
+          </center>
+        </div>
       </div>
+    </div>
 
+    <div class="container">
+  		<div class="row centered">
+  			<div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
+  				<a data-toggle="tooltip" title="Facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+  				<a data-toggle="tooltip" title="Twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+  				<a data-toggle="tooltip" title="Premium Themes" href="https://wrapbootstrap.com/user/Basicoh"><i class="fa fa-briefcase"></i></a>
+  				<a data-toggle="tooltip" title="Free Themes" href="http://BlackTie.co"><i class="fa fa-heart"></i></a>
+  				<a data-toggle="tooltip" title="Blog" href="#"><i class="fa fa-comment"></i></a>
+  				<a data-toggle="tooltip" title="Email Me!" href="http://mail.yahoo.com/"><i class="fa fa-envelope"></i></a>
+  				<a data-toggle="tooltip" title="Newsletter" href="http://eepurl.com/"><i class="fa fa-coffee"></i></a>
+  			</div>
+  		</div>
     </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    $('.tooltip-demo').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+    })
+	</script>
+
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch("img/bg.jpg", {speed: 500});
+    </script>
+
   </body>
 </html>

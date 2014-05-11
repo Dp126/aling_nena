@@ -1,0 +1,43 @@
+.nav, .navbar-nav
+{
+	float: right;
+}
+
+li
+{
+	padding-left: 50px;
+	padding-right:50px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.navbar
+{
+	opacity:1;
+	filter:alpha(opacity=60);
+}
+
+#banner
+{
+	margin-top:-70px;
+	margin-bottom:-50px;
+}
+
+#text
+{
+	font-weight:bold;
+	font-size:20px;
+	text-indent:40px;
+	text-align:justify;
+	
+}
+
+#bg
+{
+	margin:0 auto;
+	padding:20px;
+	width:900px;
+	background-color:#FFCCCC;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+}

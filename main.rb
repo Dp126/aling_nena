@@ -49,7 +49,7 @@ end
 get '/' do
   @products = Item.all
   @random_product = @products.sample(10)
-  erb :home2
+  erb :home
 end
 
 get '/products' do
@@ -69,11 +69,20 @@ post '/buy_product/:id' do
   @cost = @product.price.to_i
   @calcu = MoneyCalculator.new(params[:ones],params[:fives],params[:tens],params[:twenties],params[:fifties],params[:hundreds],params[:five_hundreds],params[:thousands])
   @change_bill = @calcu.change(@cost, @quantity)
-  if (@calcu.total.to_i > (@cost * @quantity))
+  if (@calcu.total.to_i >= (@cost * @quantity))
+    if (@quantity <= @product.quantity)
+      @product.update_attributes!(
+        quantity: @product.quantity - @quantity,
+        sold: @product.sold + @quantity
+      )
     erb :buy_results
+    else
+      erb :buy_failed
+    end
   else
     erb :buy_failed
   end
+
 end
 
 get '/about' do
