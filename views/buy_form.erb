@@ -62,7 +62,7 @@
         <div class="col-lg-6 col-lg-offset-3">
           <center>
           <br /><br /><br />
-          <h2><%= @product.name %> - Php <%= @product.price %> - Stock: <%= @product.quantity %></h2> </center>
+          <h2><%= @product.name %>  -  Php <%= @product.price %>  -  Stock: <%= @product.quantity %></h2> </center>
           <br />
           <form class = "myform" method="POST" action="<%= "/buy_product/#{@product.id}" %>">
             <div>

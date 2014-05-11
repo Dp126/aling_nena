@@ -14,7 +14,7 @@ li
 .navbar
 {
 	opacity:1;
-	filter:alpha(opacity=60);
+	filter:alpha(opacity=100);
 }
 
 #banner
