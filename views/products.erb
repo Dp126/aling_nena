@@ -11,17 +11,17 @@
     <title>Aling Nena's Sari-sari Store</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
     
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
-    <link href = "css/mystyle.css" rel="stylesheet">
+    <link href = "/css/mystyle.css" rel="stylesheet">
     
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -57,35 +57,33 @@
     </div>
 
     <div class="container">
-      <div class="logo">
-        <img src="" width="100" alt="">
+      <div class="row centered">
+        <div class="col-lg-8 col-lg-offset-2 w">
+          <br />
+          <center><h1>All Products</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Quantity</td>
+              </tr>
+            </thead>
+            <tbody>
+            <% @products.each do |product| %>
+              <tr>
+                <td><%= product.id %></td>
+                <td><%= product.name %></td>
+                <td><%= product.price %></td>
+                <td><%= product.quantity %></td>
+                <td><a href="/buy/<%= product.id %>" class="btn btn-default btn-primary">Buy</a></td>
+              </tr>
+        <% end %>          
+        </tbody>          
+          </table></center>
+        </div>
       </div>
-    <div class="row centered">
-      <div class="col-lg-8 col-lg-offset-2 w">
-        <center><h1>All Products</h1>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <td>ID</td>
-              <td>Name</td>
-              <td>Price</td>
-              <td>Quantity</td>
-            </tr>
-          </thead>
-          <tbody>
-          <% @products.each do |product| %>
-            <tr>
-              <td><%= product.id %></td>
-              <td><%= product.name %></td>
-              <td><%= product.price %></td>
-              <td><%= product.quantity %></td>
-              <td><a href="/buy/<%= product.id %>" class="btn btn-default btn-primary">Buy</a></td>
-            </tr>
-      <% end %>          
-      </tbody>          
-        </table></center>
-      </div>
-    </div>
 
     <div class="row centered">
       <div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
@@ -113,7 +111,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     <script>
     $('.tooltip-demo').tooltip({
@@ -125,9 +123,9 @@
 
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("img/bg.jpg", {speed: 500});
+        $.backstretch("/img/bg.jpg", {speed: 500});
     </script>
   </body>
 </html>

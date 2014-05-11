@@ -11,17 +11,17 @@
     <title>Aling Nena's Sari-sari Store</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
     
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
-    <link href = "css/mystyle.css" rel="stylesheet">
+    <link href = "/css/mystyle.css" rel="stylesheet">
     
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -57,28 +57,25 @@
     </div>
 
     <div class="container">
-    	<div class="logo">
-	    	<img src="" width="100" alt="">
-    	</div>
-		<div class="row centered">
-			<div class="col-lg-8 col-lg-offset-2 w">
-        <div id = "banner">
-          <img src = "/img/banner.png" height = "400px">
-        </div>
-        <center><table>
-          <tbody>
-          <% @random_product.each do |product| %>
-            <tr>
-              <td><%= product.name %>    </td>
-              <td>    Php <%= product.price %></td>
-            </tr>
-          <% end %>          
-          </tbody>          
-        </table></center>
-        <br />
-        <a href="/products" class="btn btn-default">..More Products</a>
-			</div>
-		</div>
+  		<div class="row centered">
+  			<div class="col-lg-8 col-lg-offset-2 w">
+          <div id = "banner">
+            <img src = "/img/banner.png" height = "400px">
+          </div>
+          <center><table>
+            <tbody>
+            <% @random_product.each do |product| %>
+              <tr>
+                <td><%= product.name %>    </td>
+                <td>    Php <%= product.price %></td>
+              </tr>
+            <% end %>          
+            </tbody>          
+          </table></center>
+          <br />
+          <a href="/products" class="btn btn-default">..More Products</a>
+  			</div>
+  		</div>
 		<div class="row centered">
 			<div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
 				<a data-toggle="tooltip" title="Facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
@@ -97,7 +94,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     <script>
     $('.tooltip-demo').tooltip({
@@ -109,9 +106,9 @@
 
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("img/bg.jpg", {speed: 500});
+        $.backstretch("/img/bg.jpg", {speed: 500});
     </script>
 
   </body>

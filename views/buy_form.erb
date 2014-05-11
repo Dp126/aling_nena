@@ -11,17 +11,17 @@
     <title>Purchase Form : Aling Nena's</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
     
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
-    <link href = "css/mystyle.css" rel="stylesheet">
+    <link href = "/css/mystyle.css" rel="stylesheet">
     
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -61,81 +61,82 @@
         <br>    
         <div class="col-lg-6 col-lg-offset-3">
           <center>
-          <h3><%= @product.name %> - Php <%= @product.price %> - Stock: <%= @product.quantity %></h3>
-          <form role="form" method="POST" action="<%= "/buy_product/#{@product.id}" %>">
-            <div class="form-group">
-              <label for="quantity" class="col-sm-2 control-label">Quantity</label>
-              <div class="col-sm-2">
-              <input type="number" class="form-control" name="quantity" min = "0" max = "<%= @product.quantity %>" value = "0">
+          <br /><br /><br />
+          <h2><%= @product.name %> - Php <%= @product.price %> - Stock: <%= @product.quantity %></h2> </center>
+          <br />
+          <form class = "myform" method="POST" action="<%= "/buy_product/#{@product.id}" %>">
+            <div>
+              <label for="quantity">Quantity</label>
+              <div>
+              <input type="number" name="quantity" min = "0" max = "<%= @product.quantity %>" value = "0">
               </div>
             </div> <br /><br />
             <h2>Bill Payment</h2>
-
-            <div class="form-group">
-              <label for="thousands" class="col-sm-2 control-label">Thousands</label>
-              <div class="col-sm-2">
-              <input type="number" class="form-control" name="thousands" min = "0" value = "0">
+            <br />
+            <div>
+              <label for="thousands">Thousands</label>
+              <div>
+              <input type="number" name="thousands" min = "0" value = "0">
               </div>
             </div><br />
 
-            <div class="form-group">
-              <label for="five_hundreds" class="col-sm-2 control-label">Five Hundreds</label>
-              <div class="col-sm-2">
-              <input type="number" class="form-control" name="five_hundreds" min = "0" value = "0">
+            <div>
+              <label for="five_hundreds">Five Hundreds</label>
+              <div>
+              <input type="number" name="five_hundreds" min = "0" value = "0">
               </div>
             </div><br />
 
-            <div class="form-group">
-              <label for="hundreds" class="col-sm-2 control-label">Hundreds</label>
-              <div class="col-sm-2">
-              <input type="number" class="form-control" name="hundreds" min = "0" value = "0">
+            <div>
+              <label for="hundreds">Hundreds</label>
+              <div>
+              <input type="number" name="hundreds" min = "0" value = "0">
               </div>            
             </div><br />
 
-            <div class="form-group">
-              <label for="fifties" class="col-sm-2 control-label">Fifties</label>
-              <div class="col-sm-2">
-              <input type="number" class="form-control" name="fifties" min = "0" value = "0">
+            <div>
+              <label for="fifties">Fifties</label>
+              <div>
+              <input type="number" name="fifties" min = "0" value = "0">
               </div>
             </div><br />
 
-            <div class="form-group">
-              <label for="twenties" class="col-sm-2 control-label">Twenties</label>
-              <div class="col-sm-2">
-              <input type="number" class="form-control" name="twenties" min = "0" value = "0">
+            <div>
+              <label for="twenties">Twenties</label>
+              <div>
+              <input type="number" name="twenties" min = "0" value = "0">
               </div>
             </div><br />
 
-            <div class="form-group">              
-              <label for="tens" class="col-sm-2 control-label">Tens</label>
-              <div class="col-sm-2">
-              <input type="number" class="form-control" name="tens" min = "0" value = "0">
+            <div>              
+              <label for="tens">Tens</label>
+              <div>
+              <input type="number" name="tens" min = "0" value = "0">
               </div>
             </div><br />
 
-            <div class="form-group">
-              <label for="fives" class="col-sm-2 control-label">Fives</label>
-              <div class="col-sm-2">
-              <input type="number" class="form-control" name="fives" min = "0" value = "0">
+            <div>
+              <label for="fives">Fives</label>
+              <div>
+              <input type="number" name="fives" min = "0" value = "0">
               </div>
             </div><br />
 
-            <div class="form-group">
-              <label for="ones" class="col-sm-2 control-label">Ones</label>
-              <div class="col-sm-2">
-              <input type="number" class="form-control" name="ones" min = "0" value = "0">
+            <div>
+              <label for="ones">Ones</label>
+              <div>
+              <input type="number" name="ones" min = "0" value = "0">
               </div>            
             </div><br />
 
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-10">
+            <div>
+              <div>
               <br />
               <input type="submit" class="btn btn-default btn-primary" value = "Buy Item">
               <a href="/products" class="btn btn-default">Back to Product List</a>
               </div>
             </div>
           </form>
-          </center>
         </div>
       </div>
     </div>
@@ -159,7 +160,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     <script>
     $('.tooltip-demo').tooltip({
@@ -171,9 +172,9 @@
 
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("img/bg.jpg", {speed: 500});
+        $.backstretch("/img/bg.jpg", {speed: 500});
     </script>
 
   </body>
